@@ -1,0 +1,51 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+
+    <body>
+    <div class="text-center>
+       <div class="container">
+
+
+            <div class="row">
+                <div class="text-center>
+                    <h1>Har du observert en UFO?</h1>
+                    <h2>Fortell oss om det: </h2>
+                    <form class="form">
+                        
+                        <div class="form-group">
+                            <span id="fornavnFeil" style="color: red"></span> Fornavn: <span id="UtFornavn"></span>
+                            <label for="fornavn"></label><input type="text" class="form-control" id="fornavn" />
+                            
+                        </div>
+
+                        <div class="form-group">
+                            <span id="etternavnFeil" style="color: red"></span>
+                            Etternavn: <span id="UtEtternavn"></span>
+                            <input type="text" class="form-control" id="etternavn" />
+                        
+                        </div>
+
+                        <div class="form-group">
+                            <span id="epostFeil" style="color: red"></span>
+                            Epost: <span id="UtEpost"></span>
+                            <input type="text" class="form-control" id="epost" />
+                         
+                        </div>
+
+                        <div class="form-group">
+                            <span id="HvorFeil" style="color: red"></span> Hvor?: <span id="UtHvor"></span>
+                            <label for="Hvor"></label><input type="text" class="form-control" id="Hvor" />
+                        </div>
+                    
+                        <button class="btn btn-primary" onclick="regBilettene()">Registrer observasjon</button><br />
+               
+                </div>
+            </div>
+        </div>
+    </body>
+</div>
