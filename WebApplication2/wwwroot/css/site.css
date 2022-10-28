@@ -1,18 +1,102 @@
-html {
-  font-size: 14px;
+/*/* Main */
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+h1 {
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+h2 {
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    margin-top: 10px;
 }
 
 body {
-  margin-bottom: 60px;
+    font-size: 16px;
+}
+
+.p-introduction {
+    margin-left: 1%;
+    font-style: italic;
+}
+
+
+.flex-container {
+    display: flex;
+}
+
+    .flex-container > div {
+        background-color: transparent;
+        margin: 10px;
+        padding: 20px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+
+/* Header */
+
+#header {
+    background-color: rgb(135, 20, 206);
+    display: flex;
+    padding: 20px 40px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 24px;
+    align-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.list {
+    margin: 0;
+    display: flex;
+    color: white;
+}
+
+    .list li {
+        padding: 15px;
+        margin-left: 20px;
+        margin-right: 0;
+    }
+
+        .list li:hover {
+            color: black;
+            background-color: lightgray;
+            border-radius: 20px;
+        }
+
+/* Footer */
+
+.footer-content {
+    text-align: center;
+    background-color: rgb(135, 20, 206;
+    color: black;
+    margin-top: 1.3%;
+    font-size: 24px;
+    padding: 20px 50px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border 5px
 }

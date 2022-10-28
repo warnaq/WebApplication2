@@ -1,7 +1,6 @@
 ﻿@page
-@model IndexModel
+@model WebApplication2.Pages.registerpageModel
 @{
-    ViewData["Title"] = "Home page";
 }
 
 <html lang="en">
@@ -19,18 +18,18 @@
 
 <body>
     <header id="header">
-            <div class="logo">
-            <a href="index.cshtml">
+
+        <div class="logo">
+            <a href="index.html">
                 <img src= width="100" height="50" >
             </a>            
-        </div>
+        </div> 
         <nav>
-            <p style="color :white">
-                <ul class="list"> 
+            <ul class="list"> 
                 <li><a href="index.cshtml">Om oss</a></li>
-                <li><a href="page2.cshtml">Oversikt over alle observasjoner</a></li>
+                //sette inn verdien til databse
+                <li><a href=".">Oversikt over alle observasjoner</a></li>
             </ul>  
-            </p>
         </nav>    
     </header>
 
@@ -42,7 +41,7 @@
 
         <div class="flex-container">
             <div>
-        <h2>Om deg</h2>
+        <h2><right>Om deg </right></h2>
         <p>
         Først må vi vite litt om deg. I tilfelle du er en Robott.
 
@@ -66,11 +65,26 @@
         </div>
         
         <div>
+            
+            <h2><left> Hvor, Når og Hva </left></h2>
+        <p> 
+            Nå kan du begynne å fortelle litt om observasjonen.        
+            <div class="form-group">
+                <input type="text" class="form-control" id= "hvor"/>
+                <span id="hvorFeil" style="color: red"></span>
+                Hvor: <span id="Uthvor"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id= "når"/>
+                <span id="nårFeil" style="color: red"></span>
+                Når: <span id="Utnår"></span>
+            </div>
+
+        </p>
 </body>
-<n>
 <div class="button">
-    <button onclick="window.location.href='registerpage.cshtml'">Neste</button>
+    <input type="button" onclick="page2;" value="Registrer" />
 
 </div>
-</n>
 </html>
