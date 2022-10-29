@@ -20,17 +20,12 @@
 <body>
     <header id="header">
             <div class="logo">
-            <a href="index.cshtml">
-                <img src= width="100" height="50" >
-            </a>            
         </div>
         <nav>
-            <p style="color :white">
                 <ul class="list"> 
                 <li><a href="index.cshtml">Om oss</a></li>
                 <li><a href="page2.cshtml">Oversikt over alle observasjoner</a></li>
             </ul>  
-            </p>
         </nav>    
     </header>
 
@@ -40,32 +35,27 @@
      <h2> Har du observert en UFO? Register dette i norges største observasjons database. </h2>
     </p>
 
-        <div class="flex-container">
-            <div>
-        <h2>Om deg</h2>
-        <p>
-        Først må vi vite litt om deg. I tilfelle du er en Robott.
-
+        <div class="container">
+        <form class="form">
             <div class="form-group">
-                <label for="fornavn"></label>
-                <span id="fornavnFeil" style= "color: red"></span> Fornavn: <span id="UtFornavn"></span>
-                <input type="text" class="form-control" id="fornavn"/>
+                <label>Fornavn</label>
+                <input type="text" id="Fornavn" />
+            </div>
+            <div class="form-group">
+                <label>Etternavn</label>
+                <input type="text" id="Etternavn" />
             </div>
 
             <div class="form-group">
-                <label for="etternavn"></label>
-                <span id="etternavnFeil" style="color: red"></span> Etternavn: <span id="Utetternavn"></span>
-                <input type="text" class="form-control" id="etternavn"/>
+                <label>Email</label>
+                <input type="text" id="Email" />
             </div>
 
             <div class="form-group">
-                <span id="epostFeil" style="color: red"></span> Epost: <span id="UtEpost"></span>
-                <input type="text" class="form-control" id="epost"/>
+                <input type="button" id="reg" value="Registrer" onClick="lagrePerson()" class="btn btn-primary" />
             </div>
         </p>
         </div>
-        
-        <div>
 </body>
 <n>
 <div class="button">
