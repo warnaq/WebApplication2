@@ -3,7 +3,31 @@
         Fornavn: $("#Fornavn").val(),
         Etternavn: $("#Etternavn").val(),
         Email: $("#Email").val()
+    }; 
+
+    $.post("/lagre", person, function (){
+    hentAlle();
+    });
+
+    $("#fornavn").val("");
+    $("#etternavn").val("");
+    $("#email").val("");
+ }
+
+function hentAlle() {
+    $.get("/hentAlle", function (observasjoner) {
+        formaterData(observasjoner);
+    });
+}
+
+function formaterData(observasjoner) {
+    let ut = "<table><tr><th>Fornavn</th><th>Etternavn</th><th>Email</th>";
+    for (const observasjon of observasjoner) {
+        ut += "<tr><td>" + observasjon.Fornavn + "</td><td>" + observasjon.Etternavn + "</td><td>" + observasjon.Email + "</td>" ;
     }
+    ut += "</table>";
+    $("#observasjonene").html(ut);
+}
     const url = "Person/Register";
     $.post(url, person, function (OK) {
         if (OK) {
@@ -14,6 +38,9 @@
         }
     });
 };
+
+
+
 
 function lagreSted() {
     const sted = {

@@ -31,8 +31,6 @@ if (!feil) {
 
 }
 
-visAlleobservasjonene();
-
 function visAlleobservasjonene() {
     let ut = "<table><tr><th>hvor</th><th>når</th>";
     for (let b of observasjonen) {

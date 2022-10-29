@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using UfoFinal.Models;
 using RouteAttribute = Microsoft.AspNetCore.Components.RouteAttribute;
 
+
+
 namespace UfoFinal.Controllers
 {
     [Route("[controller]/[action]")]
