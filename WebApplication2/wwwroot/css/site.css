@@ -52,35 +52,60 @@ body {
 
 
 /* Header */
+#header{
+  background-color:rgb(127, 35, 255);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'helvetica', Courier, monospace;
+  font-weight: bold;
+} 
 
-#header {
-    background-color: rgb(135, 20, 206);
-    display: flex;
-    padding: 20px 40px;
-    justify-content: flex-end;
-    align-items: flex-end;
-    font-size: 24px;
-    align-content: flex-end;
-    flex-wrap: wrap;
+#header > a{
+  text-decoration: none;
+  margin: 0 20px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  vertical-align: middle;
+  font-family: ReggaeOne;
+  display: inline-block;
 }
 
-.list {
-    margin: 0;
-    display: flex;
-    color: white;
+nav {
+  float: right;
+  font-size: 18px;
 }
 
-    .list li {
-        padding: 15px;
-        margin-left: 20px;
-        margin-right: 0;
-    }
+#header ul > li {
+  display: inline-block;
+  padding: 0 20px;
+}
 
-        .list li:hover {
-            color: black;
-            background-color: lightgray;
-            border-radius: 20px;
-        }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background:;
+  border-radius: 5px;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  padding: 14px 16px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+li a:hover, .menu:hover .dropbtn {
+  color: black;
+  background-color:lightgray;
+  border-radius: 20px;
+}
 
 /* Footer */
 
