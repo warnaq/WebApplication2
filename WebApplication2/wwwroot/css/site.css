@@ -52,14 +52,16 @@ body {
 
 
 /* Header */
-#header{
-  background-color:rgb(127, 35, 255);
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  font-family: 'helvetica', Courier, monospace;
-  font-weight: bold;
-} 
+#header {
+    background-color: rgb(19, 33, 60);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    height: 100px;
+    left: 0px;
+    margin-left: 0;
+}
 
 #header > a{
   text-decoration: none;
@@ -74,13 +76,13 @@ body {
 }
 
 nav {
-  float: right;
-  font-size: 18px;
+    float: right;
+    font-size: 18px;
 }
 
 #header ul > li {
-  display: inline-block;
-  padding: 0 20px;
+    display: inline-block;
+    padding: 30px;
 }
 
 .dropdown-content {
@@ -123,5 +125,5 @@ li a:hover, .menu:hover .dropbtn {
     justify-content: center;
     align-items: center;
     height: 200px;
-    border 5px
+    border: 5px
 }
