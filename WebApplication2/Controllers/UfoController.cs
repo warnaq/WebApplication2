@@ -1,4 +1,9 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Components;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using UfoFinal.Models;
 using RouteAttribute = Microsoft.AspNetCore.Components.RouteAttribute;
@@ -43,6 +48,49 @@ namespace UfoFinal.Controllers
                 return null;
             }
         }
-       
+
+        public bool Slett(int id)
+        {
+            try
+            {
+                Person enPerson = _db.Personer.Find(id);
+                _db.Personer.Remove(enPerson);
+                _db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public Person HentEn(int id)
+        {
+            try
+            {
+                Person enPerson = _db.Personer.Find(id);
+                return enPerson;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        public bool Endre(Person endrePerson)
+        {
+            try
+            {
+                Person enPerson = _db.Personer.Find(endrePerson.Fornavn);
+                enPerson.Etternavn = endrePerson.Etternavn;
+                enPerson.Email = endrePerson.Email;
+                _db.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

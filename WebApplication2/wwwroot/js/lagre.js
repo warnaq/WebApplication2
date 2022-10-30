@@ -3,11 +3,17 @@
         Fornavn: $("#Fornavn").val(),
         Etternavn: $("#Etternavn").val(),
         Email: $("#Email").val()
-    }; 
-
-    $.post("/lagre", person, function (){
-    hentAlle();
+    }
+    const url = "Person/Lagre";
+    $.post(url, Person, function (OK) {
+        if (OK) {
+        window.location.href = 'index.html';
+        }
+        else {
+        $("#feil").html("Feil i db - prøv igjen senere");
+        }
     });
+};
 
     $("#fornavn").val("");
     $("#etternavn").val("");
